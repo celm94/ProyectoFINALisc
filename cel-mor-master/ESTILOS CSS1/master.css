@@ -11,7 +11,7 @@ body {margin: 0;
 
 .login-box {
 width: 320px;
-height: 420px;
+height: 500px;
 background: #1302339c;
 color: #fff;
 top: 50%;
@@ -69,6 +69,21 @@ font-size: 22px;
     border: none;
     outline: none;
     height: 40px;
+    background: rgba(184, 41, 6, 0.651) ;
+    color: #fff;
     font-size: 16px;
+}
+
+/*Estilos para los enlaces de olvidaste tu contraseña y no tienes cuenta*/
+.login-box a{
+    text-decoration: none ;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+/*Estilos para los enlaces de olvidaste tu contraseña y no tienes cuenta*/
+/*para cuando el mouse se pose sobre los links*/
+.login-box a:hover{
+    color: darkolivegreen;
 }
 
