@@ -34,8 +34,29 @@ padding: 70px 30px;
 /*Ediciones para el login box, posición de los labels*/
 .login-box h1 {
 /*el margin controla la altura a la que aparece el H1 en la caja*/
-margin: 50px;
-padding: 0 0 20px;
+margin: 40px;
+padding: 0 0;
 text-align: center;
 font-size: 22px;
+}
+
+/*Ediciones para el login box, los labels*/
+.login-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+/*Ediciones para los inputs, para que aparezcan más largos en la pantalla (donde se ingresa usuario y contraseña)*/
+.login-box input{
+    width: 90%;
+    margin-bottom: 20px;
+}
+/*Ediciones para los inputs de tipo texto y password (editará los 2 juntos, se puede hacer al mismo tiempo si se coloca como se muestra abajo*/
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
 }
