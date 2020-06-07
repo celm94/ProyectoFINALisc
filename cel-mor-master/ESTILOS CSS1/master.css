@@ -49,14 +49,26 @@ font-size: 22px;
 }
 /*Ediciones para los inputs, para que aparezcan más largos en la pantalla (donde se ingresa usuario y contraseña)*/
 .login-box input{
-    width: 90%;
+    width: 100%;
     margin-bottom: 20px;
 }
 /*Ediciones para los inputs de tipo texto y password (editará los 2 juntos, se puede hacer al mismo tiempo si se coloca como se muestra abajo*/
 .login-box input[type="text"],
 .login-box input[type="password"]{
     border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
     height: 40px;
     color: #fff;
     font-size: 16px;
 }
+
+/*Ediciones para el login box, botón de submit*/
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+}
+
