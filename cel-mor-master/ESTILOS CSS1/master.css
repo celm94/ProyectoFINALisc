@@ -21,7 +21,7 @@ transform: translate(-50%, -50%);
 box-sizing: border-box;
 padding: 70px 30px;
 }
-
+/*Ediciones para el logo en cuanto a posición y forma*/
 .login-box .avatar{
     width: 150px;
     height: 130px;
@@ -30,4 +30,12 @@ padding: 70px 30px;
     top: -50px;
     left: calc(50% - 80px);
     
+}
+/*Ediciones para el login box, posición de los labels*/
+.login-box h1 {
+/*el margin controla la altura a la que aparece el H1 en la caja*/
+margin: 50px;
+padding: 0 0 20px;
+text-align: center;
+font-size: 22px;
 }
