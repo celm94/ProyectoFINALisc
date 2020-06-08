@@ -187,7 +187,7 @@ class Box {
       document.getElementById("move").textContent = `Move: ${move}`;
   
       // Tiempo
-      document.getElementById("time").textContent = `Time: ${time}`;
+      document.getElementById("Tiempo").textContent = `Tiempo: ${time}`;
   
       // Mensaje
       if (status === "won") {
