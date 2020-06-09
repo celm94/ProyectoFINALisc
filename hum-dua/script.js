@@ -184,10 +184,10 @@ class Box {
       document.querySelector(".footer button").replaceWith(newButton);
   
       // Mover
-      document.getElementById("move").textContent = `Move: ${move}`;
+      document.getElementById("movidos").textContent = `Movidos: ${move}`;
   
       // Tiempo
-      document.getElementById("Tiempo").textContent = `Tiempo: ${time}`;
+      document.getElementById("tiempo").textContent = `Tiempo: ${time}`;
   
       // Mensaje
       if (status === "won") {
