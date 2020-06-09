@@ -1,0 +1,178 @@
+<i><div style="color:rgb(255, 0, 140)"><h1>Mi juego DE ADIVINAR NUMEROS prueva tu mente </h1></div></i>
+    <i><div style="color:blue">
+<p><h2> as tu analisis es una forma entretenida de pasar el tiempo. Pero este modo de divertirse puede sacar el lado menos amable de algunas personas. No solo cuando se pierde -tener mal perder-, sino también cuando se gana. Lo que se denomina tener "mal ganar". El comportamiento en el juego es tan importante como en cualquier otra faceta de la vida. Hay que aprender a ser educado en las lides del juego.ugar es una forma entretenida de pasar el tiempo. Pero este modo de divertirse puede sacar el lado menos amable de algunas personas. No solo cuando se pierde -tener mal perder-, sino también cuando se gana. Lo que se denomina tener "mal ganar". El comportamiento en el juego es tan importante como en cualquier otra faceta de la vida. Hay que aprender a ser educado en las lides del juego.</h2></p>
+
+<p><h3> participamos en cualquier tipo de juego -con apuestas o sin ellas-, lo primero y más importante, es ser honesto, ser honrado. Nada de hacer trampas, de engañar a los otros jugadores o de utilizar cualquier tipo de treta que se salte las reglas del juego para tratar de ganarlo de una forma poco elegante y legal.</h3></p>
+</div></i>
+
+<html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <title>JavaScript - Codigo JUEGA adivina un numero entre 1 y 200</title>
+    <style>
+        .acertado {color:#f00;font-weight:bold;}
+        .fin      {font-weight:bold;}
+        .error    {color:rgba(11, 76, 218, 0.808);}
+    </style>
+    <script>
+        // buscamos un numero aleatorio entre 1 y 200
+        var numeroAdivinar=Math.floor((Math.random()*200)+1);
+        var contadorRespuestas=0;
+ 
+        function adivinar()
+        {
+            // obtenemos el numero de respuestas posibles
+            var numeroRespuestas=document.getElementById("numeroRespuestas").value;
+ 
+            if(document.getElementById("numeroRespuestas").disabled==false)
+            {
+                if(isNumber(numeroRespuestas) && numeroRespuestas>0)
+                {
+                    document.getElementById("numeroRespuestas").disabled=true;
+                    document.getElementById("numero").disabled=false;
+                    document.getElementById("numero").focus();
+                }
+          
+            }else{
+                // obtenemos el contenido del div que contiene las respuestas
+                var respuestas=document.getElementById("respuestas").innerHTML;
+ 
+                if(contadorRespuestas<numeroRespuestas)
+                {
+                    // obtenemos el numero introducido por el usuario
+                    var numero=document.getElementById("numero").value;
+ 
+                    if(isNumber(numero) && numero>0 && numero<200)
+                    {
+                        // aumentanos el numero de la respuesta dada
+                        contadorRespuestas+=1;
+ 
+                        if(numero>numeroAdivinar)
+                        {
+                            // El numero es superior
+ 
+                            // Adivimos un texto a las respuestas
+                            respuestas+="<br>"+numero+" - El numero que buscas es inferior";
+                            document.getElementById("numero").focus();
+                        }else if(numero<numeroAdivinar){
+                            // El numero es inferior
+ 
+                            // Aadivimos un texto a las respuestas
+                            respuestas+="<br>"+numero+"- El numero que buscas es superior";
+                            document.getElementById("numero").focus(); 
+                        }else{
+                            // has acertado
+ 
+                            // Adivinamos un texto a las respuestas
+                            respuestas+="<br><span class='acertado'>"+numero+" - HAS ACETADO!!</span>";
+ 
+                            fin()
+                        }
+                        // vaciamos el valor del numero
+                        document.getElementById("numero").value="";
+                    }else{
+                        respuestas+="<br><span class='error'>"+numero+  "      NO SE ASEPTAN  LETRAS O NUMEROS MAYOR A 200 TIENE QUE SER UN VALOR NUMERICO ENTRE  1 y 200</span>";
+                    }
+                }else{
+                    
+                    respuestas+="<br><span class='fin'><h2>NO HAS ACETADO( El numero era el )</h2> <h1>"+numeroAdivinar+"</h1></span>";
+ 
+                    fin()
+                }
+ 
+
+                // ponemos nuevamente todas las respuestas
+                document.getElementById("respuestas").innerHTML=respuestas;
+            }
+ 
+            // devolvemos false para que el formulario no envie los valores
+            return false;
+        }
+ 
+        // Funcion que se ejecuta al finalizar el juego
+        // ya sea por haber descubierto el numero o por finalizar el numero de
+        // intentos
+        function fin()
+        {
+            // deshabilitamos el casilla de entrar el numero, y el
+            // boton de enviar
+            document.getElementById("numero").disabled=true;
+            document.getElementById("btnEnviar").disabled=true;
+        }
+ 
+        // Simple funcion para validar un numero
+        function isNumber(n)
+        {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+    </script>
+</head>
+ 
+<body>
+      <body style="background-color:rgba(248, 235, 44, 0.5);"></body>
+<h1>Adivina un numero entre 1 y 200</h1>
+    
+<fieldset> <body style="background-color:rgba(36, 219, 158, 0.5);">
+</body>
+<form onsubmit="return adivinar()">
+    <h3>NUMERO DE LOS INTENTOS QUE SE DESEA:</h3>
+    <input type="text" name="numeroRespuestas" id="numeroRespuestas">
+ 
+    <br> <h3>Ingresa tu numero entre 1 y 200:</h3>
+    <input type="text" name="numero" id="numero" disabled>
+ 
+   <h1> <br><input type="submit" value="Enviar" id="btnEnviar"></h1>
+   <h5>Si borras tendras un ultimo intento </h5>
+    <p>
+        
+        <h1> <input type="reset" value="Borrar"> </h1>
+   
+     </p>
+    
+    
+     <html>
+        
+        <body>
+            <div id="header">
+                <ul class="nav">
+                    <div style="margin:0px auto;width:250px;text-align:left;padding:15px;background-color:rgb(21, 201, 75);border:10px solid black;"> <h1><li><a href="">Inicio     </a></li></h1>
+                    
+                </ul>
+            </div>
+        </body>
+     </body>
+     </html> 
+  
+  
+</form>
+ 
+<div id="respuestas"></div>
+
+<div id="reset"></div>
+
+<i><div style="color:hsl(128, 89%, 34%)"><h1> SI TE GUSTO MI JUEGO SUSCRIBETE </h1></i></div>
+<div>
+   
+    <h3> 
+    <a href="https://facebook.com"><h1>Has clik aqui</h1></a> 
+    </h3>
+    
+</div>
+
+<h2> O tambien puedes emviar un correo</h2>
+<p> <a href="mailto:nombre@email.com">EMVIAR CORREO</a></p>
+<div>
+    <h3> 
+
+        <h3> Si nesitas ayuda como programar CLIK EN AYUDA </h3>
+        <h3> 
+            <a href="https://www.youtube.com/watch?v=bITkHK0HuFA&vl=es-419"><h1>AYUDA</h1></a> 
+            </h3>
+        
+        
+
+ 
+</html>
